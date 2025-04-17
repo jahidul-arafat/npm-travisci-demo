@@ -1,0 +1,53 @@
+language: node_js
+
+# Specify Node.js versions to test
+node_js:
+  - 18
+  - 20
+
+# Operating system
+os:
+  - linux
+  - osx
+
+# Cache dependencies for faster builds
+cache:
+  directories:
+    - node_modules
+
+# Install dependencies
+install:
+  - npm ci
+
+# Run scripts
+script:
+  - npm test
+
+# Set environment variables (if needed)
+env:
+  global:
+    - NODE_ENV=test
+
+# Notifications configuration
+notifications:
+  email:
+    recipients:
+      - your.email@example.com
+    on_success: change
+    on_failure: always
+
+# Only build these branches (optional)
+branches:
+  only:
+    - main
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+# Deploy configuration (uncomment and modify if needed)
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: YOUR_ENCRYPTED_API_KEY
+#   app: your-app-name
+#   on:
+#     branch: main
+#     node: 20

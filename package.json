@@ -1,0 +1,34 @@
+{
+  "name": "npm-travisci-demo",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jahidul-arafat/npm-travisci-demo#readme",
+  "bugs": {
+    "url": "https://github.com/jahidul-arafat/npm-travisci-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahidul-arafat/npm-travisci-demo.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "keywords": [
+    "node",
+    "travis",
+    "ci",
+    "hello-world"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
